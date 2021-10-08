@@ -111,47 +111,47 @@ uploadEl!.addEventListener('click', e => {
 //   console.log(e.message)
 // })
 //
-axios.get('/more/get', {
-  params: new URLSearchParams('a=b&c=d')
-}).then(res => {
-  console.log(res)
-})
+// axios.get('/more/get', {
+//   params: new URLSearchParams('a=b&c=d')
+// }).then(res => {
+//   console.log(res)
+// })
 
-axios.get('/more/get', {
-  params: {
-    a: 1,
-    b: 2,
-    c: ['a', 'b', 'c']
-  }
-}).then(res => {
-  console.log(res)
-})
-
-const instance = axios.create({
-  paramsSerializer(params) {
-    return qs.stringify(params, { arrayFormat: 'brackets' })
-  }
-})
-
-instance.get('/more/get', {
-  params: {
-    a: 1,
-    b: 2,
-    c: ['a', 'b', 'c']
-  }
-}).then(res => {
-  console.log(res)
-})
+// axios.get('/more/get', {
+//   params: {
+//     a: 1,
+//     b: 2,
+//     c: ['a', 'b', 'c']
+//   }
+// }).then(res => {
+//   console.log(res)
+// })
 
 // const instance = axios.create({
-//   baseURL: 'https://img.mukewang.com/'
+//   paramsSerializer(params) {
+//     return qs.stringify(params, { arrayFormat: 'brackets' })
+//   }
 // })
-//
-// instance.get('5cc01a7b0001a33718720632.jpg')
-//
-// instance.get('https://img.mukewang.com/szimg/5becd5ad0001b89306000338-360-202.jpg')
 
-/* function getA() {
+// instance.get('/more/get', {
+//   params: {
+//     a: 1,
+//     b: 2,
+//     c: ['a', 'b', 'c']
+//   }
+// }).then(res => {
+//   console.log(res)
+// })
+
+// const instance = axios.create({
+//   baseURL: 'http://nimg.ws.126.net/'
+// })
+
+// instance.get('?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0611%2F2e84f869j00qujnx3001nc000hs00hsc.jpg&thumbnail=650x2147483647&quality=80&type=jpg')
+
+// instance.get('http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0611%2F2e84f869j00qujnx3001nc000hs00hsc.jpg&thumbnail=650x2147483647&quality=80&type=jpg')
+
+function getA() {
   return axios.get('/more/A')
 }
 
@@ -181,4 +181,3 @@ const fakeConfig = {
   }
 }
 console.log(axios.getUri(fakeConfig))
- */
